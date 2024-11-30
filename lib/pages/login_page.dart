@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property_rental_app/pages/home_page.dart';
 
 class LoginPage extends StatelessWidget{
   const LoginPage({super.key});
@@ -64,7 +65,7 @@ class LoginPage extends StatelessWidget{
                   width: double.infinity,
                   child: ElevatedButton(
                       onPressed: (){
-                        print("login clicked");
+                        Navigator.of(context).pushNamed('/home');
                       },
                       child: Text("Login")),
                 ),

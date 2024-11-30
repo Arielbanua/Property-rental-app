@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:property_rental_app/login_page.dart';
+import 'package:property_rental_app/pages/home_page.dart';
+import 'package:property_rental_app/pages/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +13,11 @@ class MyApp extends StatelessWidget{
         theme: ThemeData(
             scaffoldBackgroundColor: Colors.amberAccent
         ),
-        home: LoginPage()
+        initialRoute: '/',
+        routes: {
+          '/': (context) => LoginPage(),
+          '/home': (context) => HomePage(),
+        },
     );
   }
 
